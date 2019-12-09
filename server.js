@@ -9,11 +9,11 @@ app.set('port', (process.env.PORT || 8081));
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(multer({ dest: '/tmp/'}));
+//app.use(multer({ dest: '/tmp/'}));
 app.use(express.static('public'));
 
 //serve the registration form with get
-app.get('/index.htm', function (req, res) {
+app.get('/index', function (req, res) {
     res.sendFile( __dirname + "/" + "index.htm" );
  })
 //respond to get 
